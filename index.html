@@ -214,13 +214,17 @@
   <footer>
     <p>© 2025 University of Oklahoma, Felgar 300</p>
   </footer>
+  <script>
 
-  <!-- <script>
-    const password = prompt("Enter the password to access this site:");
-    if (password !== "HCI2025WEB") {
-      document.body.innerHTML = "<h1>Access Denied</h1>";
+    if (!sessionStorage.getItem("authenticated")) {
+      const password = prompt("Enter the password to access this site:");
+      if (password === "HCI2025WEB") {
+        sessionStorage.setItem("authenticated", true);
+      } else {
+        document.body.innerHTML = "<h1>Access Denied</h1>";
+      }
     }
-  </script> -->
+  </script>
 
 </body>
 </html>
