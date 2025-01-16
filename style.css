@@ -51,3 +51,8 @@ body {
     text-align: center;
     margin-top: 40px;
   }
+  mark {
+    background-color: #abc7dc;  
+    padding: 2px 5px;
+    border-radius: 3px;
+}
