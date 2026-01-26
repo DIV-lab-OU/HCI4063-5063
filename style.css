@@ -1,58 +1,236 @@
+:root {
+  color-scheme: light;
+
+  /* Accessible light palette (blue/gray/white) */
+  --bg: #f3f6fb;
+  --surface: #ffffff;
+  --surface-2: #eef2f8;
+  --text: #0f172a;
+  --muted: #475569;
+  --border: #cbd5e1;
+  --shadow: 0 1px 2px rgba(15, 23, 42, 0.08), 0 10px 22px rgba(15, 23, 42, 0.06);
+
+  /* Links and focus colors chosen for strong contrast on white */
+  --link: #0b4a8b;
+  --link-hover: #083a6b;
+  --focus: #1d4ed8;
+  --mark: #dbeafe;
+
+  --radius: 0.9rem;
+  --radius-sm: 0.6rem;
+  --content-max: 1100px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji",
+    "Segoe UI Emoji";
+  line-height: 1.65;
+  background: var(--bg);
+  color: var(--text);
+}
+
+a {
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+a:hover {
+  color: var(--link-hover);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.skip-link {
+  position: absolute;
+  left: 0.75rem;
+  top: 0.75rem;
+  padding: 0.5rem 0.75rem;
+  background: var(--bg);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  transform: translateY(-160%);
+  transition: transform 120ms ease;
+  z-index: 1000;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+header {
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--text);
+  padding: 1.1rem 1rem;
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(10px);
+}
+
+header h1 {
+  margin: 0 0 0.5rem;
+  font-size: clamp(1.25rem, 2.2vw, 1.65rem);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+header nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+header nav a {
+  color: var(--link);
+  background: transparent;
+  text-decoration: none;
+  padding: 0.45rem 0.7rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+}
+
+header nav a:hover {
+  border-color: var(--border);
+  background: var(--surface-2);
+}
+
+header nav a:focus-visible {
+  outline-color: var(--focus);
+}
+
+header nav a[aria-current="page"] {
+  background: var(--surface-2);
+  border-color: var(--border);
+  color: var(--text);
+}
+
+main {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: 1.25rem 1rem 2.5rem;
+}
+
+section {
+  margin: 1.25rem 0;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.1rem 1.1rem;
+}
+
+h2,
+h3,
+h4 {
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+
+h2 {
+  font-size: clamp(1.2rem, 2vw, 1.45rem);
+  margin-top: 0;
+}
+
+h3 {
+  margin-top: 0.25rem;
+}
+
+p {
+  margin: 0.6rem 0;
+}
+
+ul {
+  padding-left: 1.25rem;
+}
+
+.table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0;
+  min-width: 920px;
+}
+
+table th,
+table td {
+  border-bottom: 1px solid var(--border);
+  padding: 0.75rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+table thead th {
+  position: sticky;
+  top: 0;
+  background: var(--surface-2);
+  z-index: 1;
+}
+
+table tbody tr:nth-child(even) td {
+  background: rgba(238, 242, 248, 0.45);
+}
+
+table tbody tr td {
+  line-height: 1.5;
+}
+
+footer {
+  padding: 1rem;
+  background: transparent;
+  text-align: center;
+  color: var(--muted);
+}
+
+mark {
+  background-color: var(--mark);
+  padding: 0.1rem 0.25rem;
+  border-radius: 0.35rem;
+}
+
+/* Utility styles to support HCI principles (consistency + scannability) */
+.table-wrap table td:nth-child(1),
+.table-wrap table td:nth-child(2) {
+  white-space: nowrap;
+}
+
+.break-row td {
+  background: #dbeafe !important;
+}
+
+.note {
+  display: block;
+  margin-top: 0.85rem;
+  color: var(--muted);
+  text-align: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skip-link {
+    transition: none;
   }
-  
-  header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-    text-align: center;
-  }
-  
-  header nav a {
-    color: #fff;
-    margin: 0 10px;
-    text-decoration: none;
-  }
-  
-  header nav a:hover {
-    text-decoration: underline;
-  }
-  
-  main {
-    padding: 20px;
-  }
-  
-  
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 20px;
-  }
-  table th, table td {
-    border: 1px solid #ddd;
-    padding: 10px;
-  }
-  table th {
-    background-color: #f4f4f4;
-  }
-  table td {
-    vertical-align: top;
-  }
-  table tbody tr td {
-    line-height: 1.5em;
-  }
-  footer {
-    padding: 10px;
-    background: #f4f4f4;
-    text-align: center;
-    margin-top: 40px;
-  }
-  mark {
-    background-color: #abc7dc;  
-    padding: 2px 5px;
-    border-radius: 3px;
 }
