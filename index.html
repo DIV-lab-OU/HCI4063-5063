@@ -14,7 +14,6 @@
   <nav aria-label="Primary">
       <a href="index.html" aria-current="page">Home</a>
       <a href="#schedule">Schedule</a>
-      <a href="#crew">Crew</a>
     </nav>
   </header>
 
@@ -27,14 +26,14 @@
           <header class="person-card__header">
             <p class="person-card__role">Instructor</p>
             <h3 class="person-card__name">
-              <a href="http://jiquadcs.com/">Dr. Ghulam Jilani Quadri</a>
+              <a class="link-plain" href="http://jiquadcs.com/">Dr. Ghulam Jilani Quadri</a>
             </h3>
           </header>
 
           <dl class="person-card__details">
             <div>
               <dt>Email</dt>
-              <dd><a href="mailto:quadri@ou.edu">quadri@ou.edu</a></dd>
+              <dd><a class="link-plain" href="mailto:quadri@ou.edu">quadri@ou.edu</a></dd>
             </div>
             <div>
               <dt>Office Hours</dt>
@@ -69,7 +68,42 @@
           </dl>
         </article>
       </div>
-    
+      <section id="crew">
+
+      <div class="crew-list" role="list">
+        <article class="person-card" role="listitem" aria-label="Teaching Assistant">
+          <header class="person-card__header">
+            <p class="person-card__role">Teaching Assistant</p>
+            <h4 class="person-card__name">Tapendra Pandey</h4>
+          </header>
+
+          <dl class="person-card__details">
+            <div>
+              <dt>Email</dt>
+              <dd><a class="link-plain" href="mailto:pandey@ou.edu">pandey@ou.edu</a></dd>
+            </div>
+            <div>
+              <dt>Pronouns</dt>
+              <dd>He/Him</dd>
+            </div>
+            <div>
+              <dt>Hours</dt>
+              <dd>Tuesday and Thursday, 3:30 PM &ndash; 5:00 PM</dd>
+            </div>
+            <div>
+              <dt>Location</dt>
+              <dd>DEH 346 General Lab / Zoom</dd>
+            </div>
+          </dl>
+        </article>
+      </div>
+    </section>
+
+      <p class="callout" role="note">
+        For course and grade-related emails, please CC the instructor (<a class="link-plain" href="mailto:quadri@ou.edu">quadri@ou.edu</a>) when emailing the TA, and CC the TA (<a class="link-plain" href="mailto:pandey@ou.edu">pandey@ou.edu</a>) when emailing the instructor.
+
+        
+      </p>
       <h3>Description</h3>
       <p> This course introduces the theory and practice of human-computer interaction, focusing on the graphical
         user interfaces that make up the modern human-centric computing experience. Topics include fundamental
@@ -79,14 +113,14 @@
         semester-long team-oriented project that provides a realistic experience with human-computer interaction
         from developer, designer, and end-user perspectives.</p>
 
-      <h3>Course Objectives</h3>
+      <!-- <h3>Course Objectives</h3>
       <ul>
         <li>Describe the background and open problems within the covered topics.</li>
         <li>Propose new research projects based on the learned topics.</li>
         <li>Choose and justify appropriate HCI research methods for their projects.</li>
         <li>Understand the peer-reviewing process in HCI.</li>
         <li>Improve their communication and presentation skills.</li>
-      </ul>
+      </ul> -->
     </section>
 
     <section id="schedule">
@@ -217,19 +251,19 @@
             <td>03/26</td>
             <td>Textbook Chapter 6</td>
           </tr>
-          <tr>
+          <tr class="highlight-row">
             <td>8</td>
             <td>15</td>
             <td>03/10</td>
-            <td>Homework 2</td>
+            <td>Homework 2 / <strong>Mid Term</strong></td>
             <td>03/31</td>
-            <td>Textbook Chapter 5</td>
+            <td>Exam Preparation</td>
           </tr>
           <tr>
             <td>8</td>
             <td>16</td>
             <td>03/12</td>
-            <td><strong>Mid Term</strong></td>
+            <td>&mdash;</td>
             <td>&mdash;</td>
             <td>Textbook Chapter 5</td>
           </tr>
@@ -372,33 +406,7 @@
     </section>
     
 
-    <section id="crew">
-      <h3>Crew</h3>
-
-      <div class="crew-list" role="list">
-        <article class="person-card" role="listitem" aria-label="Teaching Assistant">
-          <header class="person-card__header">
-            <p class="person-card__role">Teaching Assistant</p>
-            <h4 class="person-card__name">Tapendra Pandey</h4>
-          </header>
-
-          <dl class="person-card__details">
-            <div>
-              <dt>Pronouns</dt>
-              <dd>He/Him</dd>
-            </div>
-            <div>
-              <dt>Hours</dt>
-              <dd>Tuesday and Thursday, 3:30 PM &ndash; 5:00 PM</dd>
-            </div>
-            <div>
-              <dt>Location</dt>
-              <dd>DEH 346 General Lab / Zoom</dd>
-            </div>
-          </dl>
-        </article>
-      </div>
-    </section>
+    
 
     
   </main>
