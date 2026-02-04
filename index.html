@@ -9,24 +9,24 @@
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
-  <header>
-    <h1>Human-Computer Interaction (CS 4063/5063)</h1>
-  <nav aria-label="Primary">
-      <a href="index.html" aria-current="page">Home</a>
-      <a href="#schedule">Schedule</a>
-    </nav>
+  <header class="site-header">
+    <div class="header-inner">
+      <h1>Human-Computer Interaction (CS 4063/5063)</h1>
+      <nav aria-label="Primary">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="#schedule">Schedule</a>
+      </nav>
+    </div>
   </header>
 
   <main id="main-content">
     <section id="intro">
-      <h2>Human-Computer Interaction (CS 4063/5063)</h2>
-
       <div class="card-grid" role="list" aria-label="Instructor and course information">
         <article class="person-card" role="listitem" aria-label="Instructor">
           <header class="person-card__header">
-            <p class="person-card__role">Instructor</p>
             <h3 class="person-card__name">
               <a class="link-plain" href="http://jiquadcs.com/">Dr. Ghulam Jilani Quadri</a>
+              <span class="person-card__suffix">(Instructor)</span>
             </h3>
           </header>
 
@@ -48,8 +48,9 @@
 
         <article class="person-card" role="listitem" aria-label="Course details">
           <header class="person-card__header">
-            <p class="person-card__role">Course Details</p>
-            <h3 class="person-card__name">Meeting &amp; Requirements</h3>
+            <h3 class="person-card__name">
+              Meeting &amp; Requirements <span class="person-card__suffix">(Course Details)</span>
+            </h3>
           </header>
 
           <dl class="person-card__details">
@@ -73,8 +74,7 @@
       <div class="crew-list" role="list">
         <article class="person-card" role="listitem" aria-label="Teaching Assistant">
           <header class="person-card__header">
-            <p class="person-card__role">Teaching Assistant</p>
-            <h4 class="person-card__name">Tapendra Pandey</h4>
+            <h4 class="person-card__name">Tapendra Pandey <span class="person-card__suffix">(Teaching Assistant)</span></h4>
           </header>
 
           <dl class="person-card__details">
